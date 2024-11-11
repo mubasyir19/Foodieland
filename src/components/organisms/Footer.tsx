@@ -11,27 +11,27 @@ const lobster = Lobster({
 export default function Footer() {
   return (
     <footer className="mt-40 px-20">
-      <div className="flex justify-between">
-        <div className="my-auto">
+      <div className="flex flex-col md:flex-row md:justify-between">
+        <div className="my-auto text-center md:text-start">
           <h1 style={lobster.style} className="text-2xl">
             Foodieland<span className="font-bold text-[#FF7426]">.</span>
           </h1>
-          <p className="mt-4 text-black text-opacity-60">
+          <p className="mt-4 text-sm text-black text-opacity-60">
             Lorem ipsum dolor sit amet, consectetuipisicing elit,{" "}
           </p>
         </div>
-        <div className="my-auto">
-          <ul className="flex gap-x-[60px] text-black">
-            <li className="text-base font-medium">
+        <div className="mx-auto mt-8">
+          <ul className="flex gap-x-4 text-black md:gap-x-5 lg:gap-x-[60px]">
+            <li className="text-sm font-medium md:text-base">
               <Link href="#">Recipes</Link>
             </li>
-            <li className="text-base font-medium">
+            <li className="text-sm font-medium md:text-base">
               <Link href="#">Blog</Link>
             </li>
-            <li className="text-base font-medium">
+            <li className="text-sm font-medium md:text-base">
               <Link href="#">Contact</Link>
             </li>
-            <li className="text-base font-medium">
+            <li className="text-sm font-medium md:text-base">
               <Link href="#">About Us</Link>
             </li>
           </ul>

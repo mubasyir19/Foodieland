@@ -16,7 +16,7 @@ export default function Navbar() {
           Foodieland<span className="font-bold text-[#FF7426]">.</span>
         </h1>
       </div>
-      <div className="my-auto">
+      <div className="my-auto hidden lg:block">
         <ul className="flex gap-x-[60px] text-black">
           <li className="text-base font-medium">
             <Link href="/">Home</Link>
@@ -35,7 +35,7 @@ export default function Navbar() {
           </li>
         </ul>
       </div>
-      <div className="my-auto">
+      <div className="my-auto hidden lg:block">
         <ul className="flex gap-x-10">
           <li className="my-auto">
             <Link href="#facebook">
@@ -95,6 +95,12 @@ export default function Navbar() {
             </Link>
           </li>
         </ul>
+      </div>
+      <div className="my-auto lg:hidden">
+        <button className="flex flex-col gap-y-1">
+          <div className="h-1 w-6 translate-y-1 rotate-45 bg-black"></div>
+          <div className="h-1 w-6 -translate-y-1 -rotate-45 bg-black"></div>
+        </button>
       </div>
     </nav>
   );

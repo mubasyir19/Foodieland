@@ -4,9 +4,9 @@ import Tag from "../atoms/Tag";
 
 export default function HeroSection() {
   return (
-    <section className="mt-10 px-20">
+    <section className="mt-10 px-10 lg:px-20">
       <div className="card relative flex">
-        <div className="w-1/2 rounded-l-3xl bg-light-blue p-12">
+        <div className="w-1/2 rounded-l-3xl bg-light-blue p-4 lg:p-8 xl:p-12">
           <div className="tag flex w-fit gap-x-3 rounded-full bg-white px-5 py-2 shadow-lg">
             <Image
               src="/images/Hot-recipes.png"
@@ -15,15 +15,15 @@ export default function HeroSection() {
               alt="hot-recipes"
               className="my-auto h-6 w-6"
             />
-            <p className="my-auto text-sm font-semibold text-black">
+            <p className="xl::text-sm my-auto text-xs font-semibold text-black">
               Hot Recipes
             </p>
           </div>
           <div className="mt-8">
-            <h1 className="text-[64px] font-semibold leading-snug text-black">
+            <h1 className="text-2xl font-semibold leading-snug text-black lg:text-4xl xl:text-6xl">
               Spicy delicious chicken wings
             </h1>
-            <p className="mt-6 text-base text-black text-opacity-60">
+            <p className="mt-6 text-xs text-black text-opacity-60 lg:text-sm xl:text-base">
               Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad
               minim{" "}
@@ -43,14 +43,16 @@ export default function HeroSection() {
                 className="my-auto h-[50px] w-[50px]"
               />
               <div className="my-auto">
-                <p className="text-base font-bold text-black">John Smith</p>
-                <p className="text-sm text-black text-opacity-60">
+                <p className="text-sm font-bold text-black lg:text-base">
+                  John Smith
+                </p>
+                <p className="text-xs text-black text-opacity-60 lg:text-sm">
                   15 March 2022
                 </p>
               </div>
             </div>
-            <div className="view my-auto flex w-fit gap-x-4 rounded-2xl bg-black px-9 py-4">
-              <p className="my-auto text-sm font-semibold text-white">
+            <div className="view my-auto flex w-fit gap-x-4 rounded-2xl bg-black px-3 py-1 lg:p-4 xl:px-9 xl:py-4">
+              <p className="my-auto text-xs font-semibold text-white lg:text-sm">
                 View Recipes
               </p>
               <svg
@@ -84,7 +86,7 @@ export default function HeroSection() {
             height={150}
             width={150}
             alt="badge"
-            className=""
+            className="h-24 w-auto"
           />
         </div>
       </div>

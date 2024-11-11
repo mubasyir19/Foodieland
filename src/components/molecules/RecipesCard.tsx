@@ -23,11 +23,11 @@ export default function RecipesCard({
           height={250}
           width={368}
           alt="cheeseburger"
-          className="mx-auto h-60 w-full rounded-3xl object-cover"
+          className="mx-auto h-36 w-full rounded-3xl object-cover lg:h-60"
         />
       </div>
       <div className="mt-6">
-        <h3 className="text-xl font-semibold">{title}</h3>
+        <h3 className="text-sm font-semibold lg:text-lg xl:text-xl">{title}</h3>
         <div className="mt-6 flex gap-x-6">
           <Tag type="duration" text={`${duration} Minutes`} />
           <Tag type="category" text={category} />

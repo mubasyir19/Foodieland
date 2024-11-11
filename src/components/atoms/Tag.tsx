@@ -44,7 +44,7 @@ export default function Tag({ type, text }: TagType) {
           />
         </svg>
       )}
-      <p className="my-auto text-sm font-medium text-black text-opacity-60">
+      <p className="my-auto text-xs font-medium text-black text-opacity-60 lg:text-sm">
         {text}
       </p>
     </div>

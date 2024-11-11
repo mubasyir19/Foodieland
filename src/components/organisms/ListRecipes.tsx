@@ -3,8 +3,8 @@ import RecipesCard from "../molecules/RecipesCard";
 
 export default function ListRecipes() {
   return (
-    <section className="mt-44 px-32">
-      <div className="mx-auto w-1/2 text-center">
+    <section className="mt-44 px-6 md:px-10 lg:px-20">
+      <div className="mx-auto text-center">
         <h2 className="text-4xl font-semibold text-black">
           Simple and tasty recipes
         </h2>
@@ -13,7 +13,7 @@ export default function ListRecipes() {
           tempor incididunt ut labore et dolore magna aliqut enim ad minim{" "}
         </p>
       </div>
-      <div className="mt-6 grid grid-cols-3 gap-10">
+      <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-3 lg:gap-10">
         {product.map((item) => (
           <RecipesCard
             key={item.id}

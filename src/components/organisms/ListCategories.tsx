@@ -4,7 +4,7 @@ import CategoryCard from "../molecules/CategoryCard";
 
 export default function ListCategories() {
   return (
-    <section className="mt-40 px-20">
+    <section className="mt-24 px-10 lg:px-20">
       <div className="flex justify-between">
         <h2 className="my-auto text-3xl font-semibold text-black">
           Categories
@@ -16,7 +16,7 @@ export default function ListCategories() {
           View All Categories
         </Link>
       </div>
-      <div className="mx-auto mt-32 grid w-11/12 grid-cols-6">
+      <div className="mx-auto mt-24 grid w-11/12 grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6">
         {Categories.map((item) => (
           <CategoryCard
             key={item.id}
