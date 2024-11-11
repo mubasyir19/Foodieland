@@ -1,4 +1,5 @@
 import HeroSection from "@/components/organisms/HeroSection";
+import Inbox from "@/components/organisms/Inbox";
 import InstagramPosts from "@/components/organisms/InstagramPosts";
 import ListCategories from "@/components/organisms/ListCategories";
 import ListRecipes from "@/components/organisms/ListRecipes";
@@ -12,6 +13,7 @@ export default function Home() {
       <ListRecipes />
       <InstagramPosts />
       <RecommendRecipes />
+      <Inbox />
     </main>
   );
 }
