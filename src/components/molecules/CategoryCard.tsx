@@ -6,6 +6,15 @@ interface CategoryCardType {
   color: string;
 }
 
+const colorClasses: { [key: string]: string } = {
+  breakfast: "from-breakfast",
+  vegan: "from-vegan",
+  meat: "from-meat",
+  dessert: "from-dessert",
+  lunch: "from-lunch",
+  chocolate: "from-chocolate",
+};
+
 export default function CategoryCard({
   imageSource,
   title,
@@ -13,7 +22,9 @@ export default function CategoryCard({
 }: CategoryCardType) {
   return (
     <div
-      className={`card relative h-28 w-36 rounded-[30px] bg-gradient-to-t from-${color} to-transparent p-7`}
+      className={`card relative h-28 w-36 rounded-[30px] bg-gradient-to-t p-7 ${
+        colorClasses[color] || "from-transparent"
+      }`}
     >
       <p className="absolute bottom-7 left-1/2 -translate-x-1/2 transform text-base font-semibold">
         {title}

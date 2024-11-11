@@ -19,19 +19,19 @@ export default function Navbar() {
       <div className="my-auto">
         <ul className="flex gap-x-[60px] text-black">
           <li className="text-base font-medium">
-            <Link href="#">Home</Link>
+            <Link href="/">Home</Link>
           </li>
           <li className="text-base font-medium">
-            <Link href="#">Recipes</Link>
+            <Link href="/recipes">Recipes</Link>
           </li>
           <li className="text-base font-medium">
-            <Link href="#">Blog</Link>
+            <Link href="/blog">Blog</Link>
           </li>
           <li className="text-base font-medium">
-            <Link href="#">Contact</Link>
+            <Link href="/contact">Contact</Link>
           </li>
           <li className="text-base font-medium">
-            <Link href="#">About Us</Link>
+            <Link href="/about">About Us</Link>
           </li>
         </ul>
       </div>
