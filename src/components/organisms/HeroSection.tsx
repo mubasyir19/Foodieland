@@ -4,9 +4,9 @@ import Tag from "../atoms/Tag";
 
 export default function HeroSection() {
   return (
-    <section className="mt-10 px-10 lg:px-20">
-      <div className="card relative flex">
-        <div className="w-1/2 rounded-l-3xl bg-light-blue p-4 lg:p-8 xl:p-12">
+    <section className="mt-10 px-5 md:px-10 lg:px-20">
+      <div className="card relative flex flex-col md:flex-row">
+        <div className="w-full rounded-tl-3xl rounded-tr-3xl bg-light-blue p-4 md:w-1/2 md:rounded-l-3xl md:rounded-tr-none lg:p-8 xl:p-12">
           <div className="tag flex w-fit gap-x-3 rounded-full bg-white px-5 py-2 shadow-lg">
             <Image
               src="/images/Hot-recipes.png"
@@ -71,16 +71,16 @@ export default function HeroSection() {
             </div>
           </div>
         </div>
-        <div className="w-1/2">
+        <div className="w-full md:w-1/2">
           <Image
             src="/images/Spicy-wings.png"
             height={640}
             width={660}
             alt="spicy-wings"
-            className="h-full w-full rounded-r-3xl object-cover"
+            className="h-full w-full rounded-bl-3xl rounded-br-3xl object-cover md:rounded-r-3xl md:rounded-bl-none"
           />
         </div>
-        <div className="absolute left-1/2 top-12 -translate-x-1/2 transform">
+        <div className="absolute left-10 top-14 h-full translate-y-1/2 transform md:left-1/2 md:top-12 md:-translate-x-1/2">
           <Image
             src="/images/Badges.png"
             height={150}
