@@ -1,6 +1,8 @@
+"use client";
+
 import { Lobster } from "next/font/google";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
 const lobster = Lobster({
   weight: ["400"],
@@ -9,15 +11,21 @@ const lobster = Lobster({
 });
 
 export default function Navbar() {
+  const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);
+
+  const handleOpen = (): void => {
+    setIsOpenMenu(!isOpenMenu);
+  };
+
   return (
-    <nav className="flex justify-between border-b border-black border-opacity-10 px-20 py-6">
+    <nav className="fixed top-0 z-50 flex w-full justify-between border-b border-black border-opacity-10 bg-white px-20 py-6">
       <div className="my-auto">
         <h1 style={lobster.style} className="text-2xl">
           Foodieland<span className="font-bold text-[#FF7426]">.</span>
         </h1>
       </div>
       <div className="my-auto hidden lg:block">
-        <ul className="flex gap-x-[60px] text-black">
+        <ul className="flex gap-x-8 text-black">
           <li className="text-base font-medium">
             <Link href="/">Home</Link>
           </li>
@@ -36,7 +44,7 @@ export default function Navbar() {
         </ul>
       </div>
       <div className="my-auto hidden lg:block">
-        <ul className="flex gap-x-10">
+        <ul className="flex gap-x-6">
           <li className="my-auto">
             <Link href="#facebook">
               <svg
@@ -97,10 +105,33 @@ export default function Navbar() {
         </ul>
       </div>
       <div className="my-auto lg:hidden">
-        <button className="flex flex-col gap-y-1">
-          <div className="h-1 w-6 translate-y-1 rotate-45 bg-black"></div>
-          <div className="h-1 w-6 -translate-y-1 -rotate-45 bg-black"></div>
+        <button onClick={handleOpen} className="flex flex-col gap-y-1">
+          <div
+            className={`h-1 w-6 transform bg-black transition-transform duration-300 ${isOpenMenu ? "translate-y-1 rotate-45" : "rotate-0"}`}
+          ></div>
+          <div
+            className={`h-1 w-6 transform bg-black transition-transform duration-300 ${isOpenMenu ? "-translate-y-1 -rotate-45" : "rotate-0"}`}
+          ></div>
         </button>
+        {isOpenMenu && (
+          <ul className="absolute inset-x-0 top-20 z-50 flex flex-col gap-x-4 border-t-2 bg-white py-1 shadow-xl transition duration-300 ease-in">
+            <li className="w-full px-20 py-1 text-start underline underline-offset-4 md:text-center">
+              <Link href="/">Home</Link>
+            </li>
+            <li className="w-full px-20 py-1 text-start underline underline-offset-4 md:text-center">
+              <Link href="/">Recipes</Link>
+            </li>
+            <li className="w-full px-20 py-1 text-start underline underline-offset-4 md:text-center">
+              <Link href="/">Blog</Link>
+            </li>
+            <li className="w-full px-20 py-1 text-start underline underline-offset-4 md:text-center">
+              <Link href="/">Contact</Link>
+            </li>
+            <li className="w-full px-20 py-1 text-start underline underline-offset-4 md:text-center">
+              <Link href="/">About Us</Link>
+            </li>
+          </ul>
+        )}
       </div>
     </nav>
   );

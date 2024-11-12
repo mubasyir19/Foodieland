@@ -4,7 +4,7 @@ import Tag from "../atoms/Tag";
 
 export default function HeroSection() {
   return (
-    <section className="mt-10 px-5 md:px-10 lg:px-20">
+    <section className="mt-32 px-5 md:px-10 lg:px-20">
       <div className="card relative flex flex-col md:flex-row">
         <div className="w-full rounded-tl-3xl rounded-tr-3xl bg-light-blue p-4 md:w-1/2 md:rounded-l-3xl md:rounded-tr-none lg:p-8 xl:p-12">
           <div className="tag flex w-fit gap-x-3 rounded-full bg-white px-5 py-2 shadow-lg">
