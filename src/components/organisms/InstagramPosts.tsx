@@ -4,17 +4,17 @@ import React from "react";
 
 export default function InstagramPosts() {
   return (
-    <section className="mt-40 w-full bg-gradient-to-t from-light-blue to-transparent p-20">
-      <div className="mx-auto w-1/2 text-center">
-        <h2 className="text-4xl font-semibold text-black">
+    <section className="mt-20 w-full bg-gradient-to-t from-light-blue to-transparent p-20 px-5 md:px-10">
+      <div className="mx-auto w-full text-center lg:w-3/4 xl:w-1/2">
+        <h2 className="text-2xl font-semibold text-black md:text-2xl lg:text-3xl xl:text-4xl">
           Check out @foodieland on Instagram
         </h2>
-        <p className="mt-6 text-base text-black text-opacity-60">
+        <p className="mt-6 text-sm text-black text-opacity-60 md:text-base">
           Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqut enim ad minim
         </p>
       </div>
-      <div className="mx-auto mt-16 grid grid-cols-4">
+      <div className="mx-auto mt-16 grid grid-cols-2 gap-4 md:grid-cols-4">
         {PostIG.map((item) => (
           <Image
             key={item.id}
