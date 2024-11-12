@@ -80,7 +80,7 @@ export default function HeroSection() {
             className="h-full w-full rounded-bl-3xl rounded-br-3xl object-cover md:rounded-r-3xl md:rounded-bl-none"
           />
         </div>
-        <div className="absolute left-10 top-14 h-full translate-y-1/2 transform md:left-1/2 md:top-12 md:-translate-x-1/2">
+        <div className="absolute left-10 top-14 h-full translate-y-1/2 transform md:left-1/2 md:top-12 md:h-0 md:-translate-x-1/2">
           <Image
             src="/images/Badges.png"
             height={150}
