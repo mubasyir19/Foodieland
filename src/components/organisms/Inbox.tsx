@@ -3,13 +3,13 @@ import React from "react";
 
 export default function Inbox() {
   return (
-    <div className="container mx-auto py-20">
-      <div className="relative w-full overflow-hidden rounded-3xl bg-light-blue py-10 text-center">
-        <div className="content mx-auto w-1/2">
+    <div className="container mx-auto p-20 px-5 md:px-10">
+      <div className="relative w-full overflow-hidden rounded-3xl bg-light-blue px-8 py-10 text-center">
+        <div className="content mx-auto w-full lg:w-1/2">
           <h2 className="text-3xl font-bold text-black">
             Deliciousness to your inbox
           </h2>
-          <p className="mt-6 text-base text-black text-opacity-60">
+          <p className="mt-6 text-black text-opacity-60 md:text-sm lg:text-base">
             Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqut enim ad minim{" "}
           </p>
@@ -18,9 +18,9 @@ export default function Inbox() {
               type="email"
               name="email"
               placeholder="Your email address.."
-              className="w-1/4 grow border border-none p-0 placeholder:text-black placeholder:text-opacity-60 focus:outline-none"
+              className="w-1/4 grow border border-none p-0 placeholder:text-sm placeholder:text-black placeholder:text-opacity-60 focus:outline-none md:placeholder:text-base"
             />
-            <button className="flex-none rounded-3xl bg-black px-6 py-4 text-center text-white">
+            <button className="flex-none rounded-3xl bg-black px-6 py-4 text-center text-xs text-white md:text-sm">
               Subscribe
             </button>
           </div>
@@ -30,14 +30,14 @@ export default function Inbox() {
           height={103}
           width={6209}
           alt="salad"
-          className="absolute bottom-0 left-0 h-auto w-96"
+          className="absolute bottom-0 left-0 z-50 h-auto w-32 md:w-40 lg:w-60 xl:w-72"
         />
         <Image
           src="/illustrations/soup.png"
           height={103}
           width={6209}
           alt="salad"
-          className="absolute bottom-0 right-0 h-auto w-96"
+          className="absolute bottom-0 right-0 z-50 h-auto w-32 md:w-40 lg:w-60 xl:w-72"
         />
       </div>
     </div>
